@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AAM-dd-lVt">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tareaPizza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gIR-D4-OWA">
+                                <rect key="frame" x="0.0" y="64" width="600" height="91"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0V-gO-T5v">
+                                <rect key="frame" x="0.0" y="159" width="600" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="aK4-si-LF8"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="HAZ TU PEDIDO PERSONALIZADO">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="22" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sR8-2B-txV">
+                                <rect key="frame" x="0.0" y="187" width="600" height="413"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MiCelda" id="fSf-fS-NGb">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fSf-fS-NGb" id="WQ0-KT-hoG">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="yDf-gM-Gex" kind="show" id="pCa-e8-hGb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1034782138" green="0.42726592940000002" blue="0.52373683449999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gIR-D4-OWA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="64" id="2MQ-bp-jBM"/>
+                            <constraint firstItem="sR8-2B-txV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="2il-Bu-5Uf"/>
+                            <constraint firstItem="sR8-2B-txV" firstAttribute="top" secondItem="K0V-gO-T5v" secondAttribute="bottom" constant="8" symbolic="YES" id="40P-LU-Hck"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gIR-D4-OWA" secondAttribute="bottom" constant="445" id="4n7-HH-0Hj"/>
+                            <constraint firstItem="K0V-gO-T5v" firstAttribute="leading" secondItem="gIR-D4-OWA" secondAttribute="leading" id="8TF-G7-mhQ"/>
+                            <constraint firstItem="gIR-D4-OWA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nhe-Cb-gbQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sR8-2B-txV" secondAttribute="bottom" id="Rf1-tl-Sgg"/>
+                            <constraint firstItem="K0V-gO-T5v" firstAttribute="top" secondItem="gIR-D4-OWA" secondAttribute="bottom" constant="4" id="fp6-xB-hS8"/>
+                            <constraint firstItem="sR8-2B-txV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ksZ-6e-GoL"/>
+                            <constraint firstItem="K0V-gO-T5v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nle-pw-GWi"/>
+                            <constraint firstItem="gIR-D4-OWA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q4k-71-Isj"/>
+                            <constraint firstItem="gIR-D4-OWA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tqy-3r-jvM"/>
+                            <constraint firstItem="K0V-gO-T5v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ym0-OD-xc0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rPK-2p-mHL"/>
+                    <connections>
+                        <outlet property="banner" destination="gIR-D4-OWA" id="deC-Pg-cbu"/>
+                        <outlet property="tableView" destination="sR8-2B-txV" id="lfA-gW-hDO"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1064" y="283"/>
+        </scene>
+        <!--Vista Tipo Masa-->
+        <scene sceneID="Pkh-aB-AqV">
+            <objects>
+                <viewController id="yDf-gM-Gex" customClass="VistaTipoMasa" customModule="tareaPizza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="38m-UC-IrM"/>
+                        <viewControllerLayoutGuide type="bottom" id="eLC-29-eyM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u2X-gY-zVe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4T-Qo-Mbf">
+                                <rect key="frame" x="20" y="64" width="560" height="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="tamaño">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muu-2Q-zoh">
+                                <rect key="frame" x="162" y="95" width="277" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="SELECCIONE TIPO DE MASA">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.41865037751677853" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-QK-mcx">
+                                <rect key="frame" x="0.0" y="133" width="600" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MiCelda1" id="4C0-70-Fms">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4C0-70-Fms" id="nhX-bW-2kL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Qjt-G7-hWx" kind="show" id="4rX-8X-54G"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="muu-2Q-zoh" firstAttribute="centerX" secondItem="u2X-gY-zVe" secondAttribute="centerX" id="5qy-hN-Knu"/>
+                            <constraint firstItem="l4T-Qo-Mbf" firstAttribute="centerX" secondItem="u2X-gY-zVe" secondAttribute="centerX" id="8aE-M1-QZs"/>
+                            <constraint firstItem="gvF-QK-mcx" firstAttribute="bottom" secondItem="eLC-29-eyM" secondAttribute="top" id="CtX-5h-wOB"/>
+                            <constraint firstItem="l4T-Qo-Mbf" firstAttribute="top" secondItem="38m-UC-IrM" secondAttribute="bottom" id="Lcb-8n-lmR"/>
+                            <constraint firstItem="l4T-Qo-Mbf" firstAttribute="leading" secondItem="u2X-gY-zVe" secondAttribute="leadingMargin" id="LeX-f0-xVb"/>
+                            <constraint firstItem="gvF-QK-mcx" firstAttribute="leading" secondItem="u2X-gY-zVe" secondAttribute="leading" id="M8j-WG-6D4"/>
+                            <constraint firstItem="l4T-Qo-Mbf" firstAttribute="centerX" secondItem="u2X-gY-zVe" secondAttribute="centerX" id="SNB-La-FFp"/>
+                            <constraint firstItem="gvF-QK-mcx" firstAttribute="centerX" secondItem="l4T-Qo-Mbf" secondAttribute="centerX" id="SXd-gK-h3E"/>
+                            <constraint firstItem="gvF-QK-mcx" firstAttribute="top" secondItem="l4T-Qo-Mbf" secondAttribute="bottom" constant="55" id="vy8-y6-olM"/>
+                            <constraint firstItem="muu-2Q-zoh" firstAttribute="top" secondItem="l4T-Qo-Mbf" secondAttribute="bottom" constant="17" id="x0k-qp-Exq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultadoTamano" destination="l4T-Qo-Mbf" id="iMx-6C-k5F"/>
+                        <outlet property="tableView1" destination="gvF-QK-mcx" id="psQ-Pj-8XP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZaL-5l-UxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="299"/>
+        </scene>
+        <!--Vista Tipo Queso-->
+        <scene sceneID="vjI-pT-l7u">
+            <objects>
+                <viewController id="Qjt-G7-hWx" customClass="VistaTipoQueso" customModule="tareaPizza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CaF-hX-yjx"/>
+                        <viewControllerLayoutGuide type="bottom" id="vwR-35-1ul"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="14o-li-PKu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIa-bg-qV6">
+                                <rect key="frame" x="20" y="72" width="560" height="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="tamano de la pizza">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIF-r7-jvl">
+                                <rect key="frame" x="20" y="94" width="560" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Jn3-gr-QPQ"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="tipo de massa de pizza">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znM-wK-m6H">
+                                <rect key="frame" x="20" y="122" width="560" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="SELECCIONE TIPO DE QUESO">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.36973049496644295" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aS8-KT-CUn">
+                                <rect key="frame" x="0.0" y="153" width="600" height="447"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MiCelda2" id="dQT-wK-Fuj">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dQT-wK-Fuj" id="sjt-69-eOO">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="u1H-Nn-cfU" kind="show" id="Hcz-fL-6UR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YIF-r7-jvl" firstAttribute="centerX" secondItem="14o-li-PKu" secondAttribute="centerX" id="2CI-L4-E1s"/>
+                            <constraint firstItem="aS8-KT-CUn" firstAttribute="centerX" secondItem="14o-li-PKu" secondAttribute="centerX" id="EWn-sN-89E"/>
+                            <constraint firstItem="UIa-bg-qV6" firstAttribute="leading" secondItem="14o-li-PKu" secondAttribute="leadingMargin" id="N9K-nY-9PP"/>
+                            <constraint firstItem="YIF-r7-jvl" firstAttribute="top" secondItem="UIa-bg-qV6" secondAttribute="bottom" constant="8" symbolic="YES" id="O9l-jM-1LT"/>
+                            <constraint firstItem="UIa-bg-qV6" firstAttribute="centerX" secondItem="14o-li-PKu" secondAttribute="centerX" id="OSs-st-TWr"/>
+                            <constraint firstItem="aS8-KT-CUn" firstAttribute="bottom" secondItem="vwR-35-1ul" secondAttribute="top" id="Q5U-TO-0kI"/>
+                            <constraint firstItem="znM-wK-m6H" firstAttribute="centerX" secondItem="14o-li-PKu" secondAttribute="centerX" id="bjK-P4-V1F"/>
+                            <constraint firstItem="UIa-bg-qV6" firstAttribute="top" secondItem="CaF-hX-yjx" secondAttribute="bottom" constant="8" symbolic="YES" id="br0-13-HM8"/>
+                            <constraint firstItem="znM-wK-m6H" firstAttribute="leading" secondItem="YIF-r7-jvl" secondAttribute="leading" id="dp1-PE-L41"/>
+                            <constraint firstItem="znM-wK-m6H" firstAttribute="top" secondItem="YIF-r7-jvl" secondAttribute="bottom" constant="8" symbolic="YES" id="eJn-k6-d28"/>
+                            <constraint firstItem="aS8-KT-CUn" firstAttribute="leading" secondItem="14o-li-PKu" secondAttribute="leading" id="eMv-z3-6yZ"/>
+                            <constraint firstItem="YIF-r7-jvl" firstAttribute="leading" secondItem="UIa-bg-qV6" secondAttribute="leading" id="i81-qT-pQ5"/>
+                            <constraint firstItem="aS8-KT-CUn" firstAttribute="top" secondItem="znM-wK-m6H" secondAttribute="bottom" constant="8" symbolic="YES" id="nYq-Ai-tiU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView2" destination="aS8-KT-CUn" id="lO5-aW-xYA"/>
+                        <outlet property="vistaTamPizza" destination="UIa-bg-qV6" id="J5D-KZ-RLs"/>
+                        <outlet property="vistaTipMasa" destination="YIF-r7-jvl" id="dad-Iu-rd9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4o2-ii-m7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2690" y="353"/>
+        </scene>
+        <!--Vista Ingredientes-->
+        <scene sceneID="wbZ-28-RIm">
+            <objects>
+                <viewController id="u1H-Nn-cfU" customClass="VistaIngredientes" customModule="tareaPizza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OJT-wv-qgj"/>
+                        <viewControllerLayoutGuide type="bottom" id="HIz-I0-Kd2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pnj-kF-rlM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB7-PC-Vqi">
+                                <rect key="frame" x="20" y="72" width="560" height="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="tamano de pizza">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwK-sh-z3h">
+                                <rect key="frame" x="20" y="94" width="560" height="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="tipo de massa pizza">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yve-bw-rDo">
+                                <rect key="frame" x="20" y="116" width="560" height="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="tipo de queso pizza">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJB-ub-AM8">
+                                <rect key="frame" x="20" y="138" width="560" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="SELECCIONE SUS INGREDIENTES">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.32479551174496646" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MmE-KG-LyE" customClass="chekbox" customModule="tareaPizza" customModuleProvider="target">
+                                <rect key="frame" x="161" y="257" width="280" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="AGREGAR PAVO ..................">
+                                            <attributes>
+                                                <color key="NSColor" red="0.55978397651006706" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4u-wA-BGx" customClass="chekbox" customModule="tareaPizza" customModuleProvider="target">
+                                <rect key="frame" x="161" y="294" width="280" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="AGREGA SALCHIPAPA .............">
+                                            <attributes>
+                                                <color key="NSColor" red="0.55978397651006706" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vhc-ha-YpN" customClass="chekbox" customModule="tareaPizza" customModuleProvider="target">
+                                <rect key="frame" x="160" y="368" width="280" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="AGREGAR CEBOLLA ...............">
+                                            <attributes>
+                                                <color key="NSColor" red="0.55978397651006706" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bGZ-em-7Te" customClass="chekbox" customModule="tareaPizza" customModuleProvider="target">
+                                <rect key="frame" x="161" y="405" width="280" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="AGREGAR PIMIENTO ..............">
+                                            <attributes>
+                                                <color key="NSColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rj6-rG-FCf" customClass="chekbox" customModule="tareaPizza" customModuleProvider="target">
+                                <rect key="frame" x="161" y="442" width="280" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="AGREGAR PIÑA ..................">
+                                            <attributes>
+                                                <color key="NSColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ige-5v-T9N">
+                                <rect key="frame" x="227" y="522" width="147" height="30"/>
+                                <state key="normal" title="SIGUIENTE &gt;&gt;&gt;&gt;&gt;&gt;&gt;"/>
+                                <connections>
+                                    <segue destination="8nS-3V-TtS" kind="show" id="RzF-nA-zwV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BIc-dB-pG5" customClass="chekbox" customModule="tareaPizza" customModuleProvider="target">
+                                <rect key="frame" x="161" y="183" width="280" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="AGREGAR JAMON .................">
+                                            <attributes>
+                                                <color key="NSColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="buttonJamon:" destination="u1H-Nn-cfU" eventType="touchUpInside" id="65t-mt-PQJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8e-Fo-txQ" customClass="chekbox" customModule="tareaPizza" customModuleProvider="target">
+                                <rect key="frame" x="161" y="331" width="280" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="AGREGAR ACEITUNA ..............">
+                                            <attributes>
+                                                <color key="NSColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XdL-12-hYP" customClass="chekbox" customModule="tareaPizza" customModuleProvider="target">
+                                <rect key="frame" x="162" y="220" width="280" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="AGREGAR PEPPERONI .............">
+                                            <attributes>
+                                                <color key="NSColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2uP-vv-kwC" customClass="chekbox" customModule="tareaPizza" customModuleProvider="target">
+                                <rect key="frame" x="160" y="479" width="280" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="AGREGAR HUEVO .................">
+                                            <attributes>
+                                                <color key="NSColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ige-5v-T9N" firstAttribute="centerX" secondItem="Pnj-kF-rlM" secondAttribute="centerX" id="2ox-xn-lnV"/>
+                            <constraint firstItem="Yve-bw-rDo" firstAttribute="leading" secondItem="FJB-ub-AM8" secondAttribute="leading" id="31h-YQ-vHB"/>
+                            <constraint firstItem="FB7-PC-Vqi" firstAttribute="trailing" secondItem="Pnj-kF-rlM" secondAttribute="trailingMargin" id="3m3-MG-SUs"/>
+                            <constraint firstItem="XdL-12-hYP" firstAttribute="centerX" secondItem="Pnj-kF-rlM" secondAttribute="centerX" constant="2" id="8BV-wS-9kf"/>
+                            <constraint firstItem="Vhc-ha-YpN" firstAttribute="centerX" secondItem="Pnj-kF-rlM" secondAttribute="centerX" id="ADi-Cb-fIs"/>
+                            <constraint firstItem="Rj6-rG-FCf" firstAttribute="top" secondItem="bGZ-em-7Te" secondAttribute="bottom" constant="8" id="AHq-ty-BT8"/>
+                            <constraint firstItem="Ige-5v-T9N" firstAttribute="top" secondItem="2uP-vv-kwC" secondAttribute="bottom" constant="14" id="D8R-A5-NKJ"/>
+                            <constraint firstItem="FB7-PC-Vqi" firstAttribute="leading" secondItem="Pnj-kF-rlM" secondAttribute="leadingMargin" id="EDD-bB-Pxy"/>
+                            <constraint firstItem="XdL-12-hYP" firstAttribute="top" secondItem="BIc-dB-pG5" secondAttribute="bottom" constant="8" symbolic="YES" id="G4r-OW-RLF"/>
+                            <constraint firstItem="2uP-vv-kwC" firstAttribute="top" secondItem="Rj6-rG-FCf" secondAttribute="bottom" constant="8" id="GL7-GQ-xLf"/>
+                            <constraint firstItem="J4u-wA-BGx" firstAttribute="top" secondItem="MmE-KG-LyE" secondAttribute="bottom" constant="8" id="GSu-oZ-Izk"/>
+                            <constraint firstItem="Rj6-rG-FCf" firstAttribute="centerX" secondItem="Pnj-kF-rlM" secondAttribute="centerX" constant="1" id="JbO-E1-RUo"/>
+                            <constraint firstItem="I8e-Fo-txQ" firstAttribute="centerX" secondItem="Pnj-kF-rlM" secondAttribute="centerX" constant="1" id="MEE-ac-atm"/>
+                            <constraint firstItem="FB7-PC-Vqi" firstAttribute="top" secondItem="OJT-wv-qgj" secondAttribute="bottom" constant="8" symbolic="YES" id="QfC-Cw-RXH"/>
+                            <constraint firstItem="BwK-sh-z3h" firstAttribute="leading" secondItem="Yve-bw-rDo" secondAttribute="leading" id="Tyd-Z9-0hZ"/>
+                            <constraint firstItem="bGZ-em-7Te" firstAttribute="top" secondItem="Vhc-ha-YpN" secondAttribute="bottom" constant="8" id="WdQ-Oz-pT0"/>
+                            <constraint firstItem="2uP-vv-kwC" firstAttribute="centerX" secondItem="Pnj-kF-rlM" secondAttribute="centerX" id="YHg-Cb-A4s"/>
+                            <constraint firstItem="FB7-PC-Vqi" firstAttribute="leading" secondItem="BwK-sh-z3h" secondAttribute="leading" id="ZDj-Ya-A6K"/>
+                            <constraint firstItem="BwK-sh-z3h" firstAttribute="trailing" secondItem="Yve-bw-rDo" secondAttribute="trailing" id="bO3-14-mfk"/>
+                            <constraint firstItem="Yve-bw-rDo" firstAttribute="trailing" secondItem="FJB-ub-AM8" secondAttribute="trailing" id="ezN-Xf-E8Q"/>
+                            <constraint firstItem="FJB-ub-AM8" firstAttribute="top" secondItem="Yve-bw-rDo" secondAttribute="bottom" constant="8" symbolic="YES" id="iXp-N1-slS"/>
+                            <constraint firstItem="BIc-dB-pG5" firstAttribute="centerX" secondItem="Pnj-kF-rlM" secondAttribute="centerX" constant="1" id="kJJ-nm-tek"/>
+                            <constraint firstItem="BwK-sh-z3h" firstAttribute="top" secondItem="FB7-PC-Vqi" secondAttribute="bottom" constant="8" symbolic="YES" id="lXQ-bU-Z0c"/>
+                            <constraint firstItem="MmE-KG-LyE" firstAttribute="top" secondItem="BIc-dB-pG5" secondAttribute="bottom" constant="45" id="lfd-Ym-Fnd"/>
+                            <constraint firstItem="Vhc-ha-YpN" firstAttribute="top" secondItem="J4u-wA-BGx" secondAttribute="bottom" constant="45" id="nxD-5h-uAE"/>
+                            <constraint firstItem="J4u-wA-BGx" firstAttribute="centerX" secondItem="Pnj-kF-rlM" secondAttribute="centerX" constant="1" id="sZc-OR-gWW"/>
+                            <constraint firstItem="bGZ-em-7Te" firstAttribute="centerX" secondItem="Pnj-kF-rlM" secondAttribute="centerX" constant="1" id="tCG-a8-e9K"/>
+                            <constraint firstItem="Yve-bw-rDo" firstAttribute="top" secondItem="BwK-sh-z3h" secondAttribute="bottom" constant="8" symbolic="YES" id="up8-Qr-gqu"/>
+                            <constraint firstItem="I8e-Fo-txQ" firstAttribute="top" secondItem="J4u-wA-BGx" secondAttribute="bottom" constant="8" symbolic="YES" id="wQu-5t-LIh"/>
+                            <constraint firstItem="MmE-KG-LyE" firstAttribute="centerX" secondItem="Pnj-kF-rlM" secondAttribute="centerX" constant="1" id="wbe-k6-9B4"/>
+                            <constraint firstItem="BIc-dB-pG5" firstAttribute="top" secondItem="FJB-ub-AM8" secondAttribute="bottom" constant="22" id="wsJ-eD-V3N"/>
+                            <constraint firstItem="FB7-PC-Vqi" firstAttribute="trailing" secondItem="BwK-sh-z3h" secondAttribute="trailing" id="zMI-ZG-iS9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PresionaAceituna" destination="I8e-Fo-txQ" id="6sf-Ei-ViG"/>
+                        <outlet property="PresionaCebolla" destination="Vhc-ha-YpN" id="Wic-XK-Ltr"/>
+                        <outlet property="PresionaHuevo" destination="2uP-vv-kwC" id="xf1-cG-cYl"/>
+                        <outlet property="PresionaJamon" destination="BIc-dB-pG5" id="u6b-iD-VtD"/>
+                        <outlet property="PresionaPavo" destination="MmE-KG-LyE" id="PGi-Ao-5Y1"/>
+                        <outlet property="PresionaPeperoni" destination="XdL-12-hYP" id="ETt-rF-UCG"/>
+                        <outlet property="PresionaPimiento" destination="bGZ-em-7Te" id="ebl-UW-HLt"/>
+                        <outlet property="PresionaPina" destination="Rj6-rG-FCf" id="ItY-c8-n75"/>
+                        <outlet property="PresionaSalchi" destination="J4u-wA-BGx" id="qJs-gW-gFm"/>
+                        <outlet property="vistaTamPizza" destination="FB7-PC-Vqi" id="waI-AQ-W1M"/>
+                        <outlet property="vistaTipMasa" destination="BwK-sh-z3h" id="KJx-ht-ggx"/>
+                        <outlet property="vistaTipQueso" destination="Yve-bw-rDo" id="Bhq-oU-4Sw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGF-yp-Jen" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3367" y="353"/>
+        </scene>
+        <!--Vista Final-->
+        <scene sceneID="l0R-kU-gGl">
+            <objects>
+                <viewController id="8nS-3V-TtS" customClass="VistaFinal" customModule="tareaPizza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9vC-1Z-zLj"/>
+                        <viewControllerLayoutGuide type="bottom" id="fBd-0M-JIn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Bh-L1-2bT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNb-g2-JbW">
+                                <rect key="frame" x="162" y="72" width="277" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="CONFIRMACIÓN DEL PEDIDO">
+                                        <attributes>
+                                            <color key="NSColor" red="0.55652265100671139" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pug-Cb-sbp">
+                                <rect key="frame" x="133" y="127" width="184" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TAMAÑO DE PIZZA : ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.32183305369127518" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="CourierNewPS-BoldItalicMT"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIPO DE MASA ...:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPA-in-yi6">
+                                <rect key="frame" x="133" y="155" width="184" height="20"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.36973049499999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIPO DE QUESO ...:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcH-Lv-AFh">
+                                <rect key="frame" x="133" y="183" width="184" height="20"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.36973049499999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZA-Bi-FiJ">
+                                <rect key="frame" x="133" y="211" width="184" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="INGREDIENTES ....:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.36973049499999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bh6-T0-mDj">
+                                <rect key="frame" x="120" y="332" width="145" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CONFIRMAR PEDIDO">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.3352558725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="AlertaFinal:" destination="8nS-3V-TtS" eventType="touchUpInside" id="r80-kp-f5o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wqw-vH-tXy">
+                                <rect key="frame" x="345" y="332" width="136" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CANCELAR PEDIDO">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.3352558725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="CourierNewPS-BoldItalicMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="v6M-nx-hwv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWA-qn-Xw9">
+                                <rect key="frame" x="358" y="125" width="52" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnZ-nU-5tU">
+                                <rect key="frame" x="358" y="153" width="52" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctv-fh-dtw">
+                                <rect key="frame" x="358" y="181" width="52" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oyg-Ed-dWQ">
+                                <rect key="frame" x="133" y="239" width="348" height="57"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="348" id="1i6-SS-Hqc"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="texo">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="CourierNewPS-BoldItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bh6-T0-mDj" firstAttribute="top" secondItem="oyg-Ed-dWQ" secondAttribute="bottom" constant="36" id="1py-6D-wg1"/>
+                            <constraint firstItem="CNb-g2-JbW" firstAttribute="top" secondItem="9vC-1Z-zLj" secondAttribute="bottom" constant="52" id="1yL-Ze-syT"/>
+                            <constraint firstItem="ctv-fh-dtw" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="84" id="20F-dn-UAv"/>
+                            <constraint firstItem="xPA-in-yi6" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="-75" id="5mo-PE-i9B"/>
+                            <constraint firstItem="GWA-qn-Xw9" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="84" id="6gL-CQ-zh5"/>
+                            <constraint firstItem="CNb-g2-JbW" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="0.5" id="8Ri-wc-Ybb"/>
+                            <constraint firstItem="Wqw-vH-tXy" firstAttribute="baseline" secondItem="bh6-T0-mDj" secondAttribute="baseline" id="AtU-4e-fCp"/>
+                            <constraint firstItem="LZA-Bi-FiJ" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="-75" id="C2M-WA-SIZ"/>
+                            <constraint firstItem="xPA-in-yi6" firstAttribute="top" secondItem="Pug-Cb-sbp" secondAttribute="bottom" constant="8" symbolic="YES" id="DLu-Xa-N4m"/>
+                            <constraint firstItem="qnZ-nU-5tU" firstAttribute="centerY" secondItem="6Bh-L1-2bT" secondAttribute="centerY" constant="-136.5" id="G8b-Tt-mhZ"/>
+                            <constraint firstItem="qnZ-nU-5tU" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="84" id="GrQ-qg-IUf"/>
+                            <constraint firstItem="Pug-Cb-sbp" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="-75" id="IdL-rj-r7K"/>
+                            <constraint firstItem="bh6-T0-mDj" firstAttribute="centerY" secondItem="6Bh-L1-2bT" secondAttribute="centerY" constant="46.5" id="Ip0-6Z-XOL"/>
+                            <constraint firstItem="Wqw-vH-tXy" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="113" id="NU0-V4-um0"/>
+                            <constraint firstItem="ctv-fh-dtw" firstAttribute="centerY" secondItem="6Bh-L1-2bT" secondAttribute="centerY" constant="-108.5" id="OgH-gQ-ijE"/>
+                            <constraint firstItem="LcH-Lv-AFh" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="-75" id="Svr-oY-RnH"/>
+                            <constraint firstItem="xPA-in-yi6" firstAttribute="centerY" secondItem="6Bh-L1-2bT" secondAttribute="centerY" constant="-135" id="Umy-3G-ytA"/>
+                            <constraint firstItem="bh6-T0-mDj" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="-107.5" id="bjW-xo-XdJ"/>
+                            <constraint firstItem="oyg-Ed-dWQ" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="7" id="cja-Xw-k0K"/>
+                            <constraint firstItem="oyg-Ed-dWQ" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="7" id="iNe-Vh-c8w"/>
+                            <constraint firstItem="LcH-Lv-AFh" firstAttribute="centerY" secondItem="6Bh-L1-2bT" secondAttribute="centerY" constant="-107" id="lSn-vb-UMu"/>
+                            <constraint firstItem="oyg-Ed-dWQ" firstAttribute="top" secondItem="LZA-Bi-FiJ" secondAttribute="bottom" constant="8" symbolic="YES" id="mC4-ez-1ZN"/>
+                            <constraint firstItem="bh6-T0-mDj" firstAttribute="centerY" secondItem="6Bh-L1-2bT" secondAttribute="centerY" constant="46.5" id="nMM-eJ-Ieb"/>
+                            <constraint firstItem="bh6-T0-mDj" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="-107.5" id="qJP-MY-R9t"/>
+                            <constraint firstItem="LZA-Bi-FiJ" firstAttribute="centerY" secondItem="6Bh-L1-2bT" secondAttribute="centerY" constant="-79" id="qdp-rQ-EM6"/>
+                            <constraint firstItem="GWA-qn-Xw9" firstAttribute="centerY" secondItem="6Bh-L1-2bT" secondAttribute="centerY" constant="-164.5" id="r2f-Ex-cCE"/>
+                            <constraint firstItem="Wqw-vH-tXy" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="113" id="usE-cg-Pew"/>
+                            <constraint firstItem="Wqw-vH-tXy" firstAttribute="centerY" secondItem="6Bh-L1-2bT" secondAttribute="centerY" constant="46.5" id="vAa-5f-5aM"/>
+                            <constraint firstItem="Pug-Cb-sbp" firstAttribute="leading" secondItem="xPA-in-yi6" secondAttribute="leading" id="xEq-Uz-ttr"/>
+                            <constraint firstItem="oyg-Ed-dWQ" firstAttribute="centerX" secondItem="6Bh-L1-2bT" secondAttribute="centerX" constant="7" id="xZr-Sd-z2a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="vistaIngredTodos" destination="oyg-Ed-dWQ" id="USe-9o-rJE"/>
+                        <outlet property="vistaTamPizza" destination="GWA-qn-Xw9" id="7lb-9s-Esl"/>
+                        <outlet property="vistaTipMasa" destination="qnZ-nU-5tU" id="w76-U2-KA3"/>
+                        <outlet property="vistaTipQueso" destination="ctv-fh-dtw" id="jXC-B8-yBv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DbQ-63-fkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="1109"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EpG-Pz-2gO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AAM-dd-lVt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IHJ-M5-kFU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SnN-GL-mtE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lz1-38-XKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-95" y="943"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pizza2.jpg" width="355" height="142"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="v6M-nx-hwv"/>
+    </inferredMetricsTieBreakers>
+</document>
